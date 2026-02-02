@@ -1,0 +1,166 @@
+<div id="mc_embed_shell">
+  <style type="text/css">
+    :root {
+      --bg-color-dark: #333;
+      --color-dark: #eee;
+      --bg-color-light: #eee;
+      --color-light: #333;
+      --color-light-max: #000;
+      --color-dark-max: #fff;
+    }
+    #subscription-container {
+      width: 320px;
+      text-align: center;
+      margin: 0 auto;
+    }
+    #subscription-container h5 {
+      font-weight: 600;
+      font-size: 1rem;
+    }
+    .quarto-light #subscription-container h5 {
+      color: var(--color-light);
+    }
+    .quarto-dark #subscription-container h5 {
+      color: var(--color-dark);
+    }
+    .subscribe-form {
+      padding: 1px;
+      margin-bottom: 20px;
+      display: flex;
+      flex-direction: column;
+    }
+    .subscribe-form input {
+      display: block;
+      width: 100%;
+      padding: 8px 10px;
+      border-radius: 4px;
+      margin-bottom: 12px;
+      font-size: 14px;
+      background-color: transparent;
+      border: 1px solid;
+      color: #eee;
+    }
+    .subscribe-form input:focus {
+      outline: none;
+    }
+    .quarto-light .subscribe-form input:focus {
+      border-color: var(--color-light-max);
+    }
+    .quarto-dark .subscribe-form input:focus {
+      border-color: var(--color-dark-max);
+    }
+    .quarto-light .subscribe-form input {
+      color: var(--color-light);
+      border-color: var(--color-light);
+    }
+    .quarto-dark .subscribe-form input {
+      border-color: var(--color-dark);
+      color: var(--color-dark);
+    }
+    input[type="submit"] {
+      display: block;
+      font-size: 14px;
+      width: 100%;
+      padding: 6px 10px;
+      background-color: #eee;
+      border: 0.5px solid;
+      border-radius: 4px;
+      color: #000;
+      transition: all 0.3s ease-in-out;
+      cursor: pointer;
+    }
+    .quarto-light input[type="submit"] {
+      color: var(--color-light);
+      border-color: var(--color-light);
+      border-color: var(--color-light);
+    }
+    .quarto-dark input[type="submit"] {
+      border-color: var(--color-dark);
+      background-color: var(--bg-color-dark);
+      color: var(--color-dark);
+    }
+    .quarto-light input[type="submit"]:hover {
+      background-color: var(--bg-color-dark);
+      color: var(--color-dark);
+    }
+    .quarto-dark input[type="submit"]:hover {
+      color: var(--color-light);
+      background-color: var(--bg-color-light);
+    }
+    @media (max-width: 480px) {
+      #subscription-container {
+        width: 100%;
+      }
+    }
+    #info {
+      width: 100%;
+      display: block;
+      opacity: 1;
+      transition: all 0.3s;
+    }
+    #info.hide {
+      opacity: 0;
+    }
+    #info.success {
+      color: #4bb543;
+    }
+    #info.error {
+      color: #d9534f;
+    }
+    #info.info {
+      color: #bebe00;
+    }
+  </style>
+  <div id="subscription-container">
+    <h5>Subscribe to our newsletter</h5>
+    <form class="subscribe-form" name="subscription">
+      <input
+        type="text"
+        placeholder="Email"
+        class="subscribe-form__text"
+        name="Email"
+      />
+      <input type="submit" class="subscribe-form__btn" value="Subscribe" />
+      <span id="info" class="hide">test</span>
+    </form>
+  </div>
+  <script>
+    const scriptURL =
+      "https://script.google.com/macros/s/AKfycbys90RlG4tzGVaRcUaYRCRVeytSmKc3SuuMD70uvyEeo-RynAHJRKTNu2v_fQ1JNQQuMQ/exec";
+    const form = document.forms["subscription"];
+    const subscriptionInfo = document.getElementById("info");
+
+    function createInfo(message, type, timeout) {
+      subscriptionInfo.innerHTML = message;
+      subscriptionInfo.className = "";
+      subscriptionInfo.classList.add(type);
+      if (timeout) {
+        setTimeout(() => {
+          if (!subscriptionInfo.classList.contains("hide")) {
+            subscriptionInfo.classList.add("hide");
+          }
+        }, timeout);
+      }
+    }
+
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+      if (emailRegex.test(form.Email.value)) {
+        createInfo("Please wait...", "info");
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => {
+            createInfo("Subscribed successfully", "success", 3000);
+            form.reset();
+          })
+          .catch((error) => {
+            console.error("Error!", error.message);
+            createInfo("Unable to post the email", "error", 3000);
+          });
+      } else {
+        createInfo("Invalid email", "error", 5000);
+        form.Email.focus();
+      }
+    });
+  </script>
+</div>
