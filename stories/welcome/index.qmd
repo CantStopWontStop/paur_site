@@ -1,13 +1,13 @@
 ---
 title: "Welcome to the Blog"
-author: 'Afromation Digital'
+author: 'Pan-African Updates'
 date: "2023-01-07"
 categories: [update]
 title-block-banner: true
 image: https://images.unsplash.com/photo-1626695436755-3e288720849c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80
 ---
 
-This is the first post. Here on the Afromation blog, we put forth ideas critical to building the AfroSphere[^1].
+This is the first post. Here on the Pan-African Updates, we put forth ideas critical to building the AfroSphere[^1].
 
 [^1]: The cultural, political, and economic congregation of Africans and people of African decent
 
@@ -16,3 +16,124 @@ This is the first post. Here on the Afromation blog, we put forth ideas critical
 :::
 
 Welcome!
+
+Text for the page.
+
+# Title
+
+## Subtitle
+
+::: panel-tabset
+## Tab 1
+
+Content 1
+
+## Tab 2
+
+Content 2
+
+## Tab 3
+
+Content 3
+:::
+
+```{r}
+# Leaflet map of Abuja (Nigeria)
+# install.packages(c("leaflet", "leaflet.extras", "htmlwidgets", "dplyr"))
+library(leaflet)
+library(leaflet.extras)
+
+# Abuja city center (approx.)
+abuja <- data.frame(
+  name = "Abuja (City Centre)",
+  lat  = 9.0765,
+  lng  = 7.3986
+)
+
+m <- leaflet(abuja) |>
+  addProviderTiles(providers$CartoDB.Positron, group = "Light") |>
+  addProviderTiles(providers$Esri.WorldImagery, group = "Satellite") |>
+  addProviderTiles(providers$OpenStreetMap, group = "OSM") |>
+
+  # Marker + popup
+  addMarkers(
+    ~lng, ~lat,
+    popup = ~paste0("<b>", name, "</b><br/>Lat: ", lat, "<br/>Lng: ", lng)
+  ) |>
+
+  # A 10 km radius circle around the center (for visual context)
+  addCircles(
+    lng = abuja$lng, lat = abuja$lat,
+    radius = 10000,
+    stroke = TRUE, weight = 2,
+    fillOpacity = 0.15,
+    popup = "10 km radius from Abuja city centre"
+  ) |>
+
+  # Quick navigation helpers
+  addFullscreenControl() |>
+  addMeasure(
+    primaryLengthUnit = "kilometers",
+    primaryAreaUnit   = "sqmeters"
+  ) |>
+  addMiniMap(toggleDisplay = TRUE) |>
+
+  # Set initial view
+  setView(lng = abuja$lng, lat = abuja$lat, zoom = 12) |>
+
+  # Layer control
+  addLayersControl(
+    baseGroups = c("Light", "Satellite", "OSM"),
+    options = layersControlOptions(collapsed = TRUE)
+  )
+
+m
+```
+
+```{r}
+# install.packages("ggplot2")   # Uncomment if needed
+library(ggplot2)
+
+# Data: estimated net worth of top 10 richest soccer players
+players <- c(
+  "Faiq Bolkiah", "Cristiano Ronaldo", "Lionel Messi",
+  "David Beckham", "Neymar Jr", "Kylian Mbappé",
+  "Wayne Rooney", "Dave Whelan", "Karim Benzema",
+  "Zlatan Ibrahimović"
+)
+
+net_worth <- c(
+  20000000000, 1400000000, 850000000,
+  500000000, 350000000, 300000000,
+  220000000, 210000000, 200000000,
+  190000000
+)
+
+df_richest <- data.frame(
+  Player = players,
+  NetWorth = net_worth
+)
+
+# Convert to factor to control bar order (descending)
+df_richest$Player <- factor(df_richest$Player, 
+                            levels = df_richest$Player[order(df_richest$NetWorth, decreasing = TRUE)])
+
+# Plot
+ggplot(df_richest, aes(x = Player, y = NetWorth / 1e9)) +
+  geom_bar(stat = "identity", fill = "steelblue") +
+  coord_flip() +
+  labs(
+    title = "Top 10 Richest Soccer Players in the World",
+    subtitle = "Estimated Net Worth (in USD, billions)",
+    x = "Player",
+    y = "Net Worth (Billion USD)"
+  ) +
+  theme_minimal() +
+  theme(
+    text = element_text(family = "Arial", size = 12),
+    plot.title = element_text(face = "bold", size = 16)
+  )
+
+```
+
+/

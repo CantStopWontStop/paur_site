@@ -1,0 +1,21 @@
+[
+  {
+    "listing": "/updates.html",
+    "items": [
+      "/posts/2026-01-21/index.html",
+      "/posts/2026-01-20/index.html"
+    ]
+  },
+  {
+    "listing": "/index.html",
+    "items": [
+      "/stories/welcome/index.html"
+    ]
+  },
+  {
+    "listing": "/stories.html",
+    "items": [
+      "/stories/welcome/index.html"
+    ]
+  }
+]

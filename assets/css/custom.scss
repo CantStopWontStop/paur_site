@@ -28,6 +28,7 @@ $yellow:  #FCDC4D !default;
 $green:   #00863f !default;
 $teal:    #20c997 !default;
 $cyan:    #1282A2 !default;
+$gold: #fec76f;
 
 $primary:       $blue !default;
 $secondary:     $gray-500 !default;
@@ -159,7 +160,7 @@ div.quarto-post .listing-categories .listing-category {
 }
 .sidebar nav[role=doc-toc] ul li a.active {
     border-left: 1px solid #21274b;
-    color: #00863f !important;
+    color: $black !important;
 }
 
 .listing-title {
@@ -195,7 +196,7 @@ div.quarto-post .listing-categories .listing-category {
 }
 
 .thumbnail-image {
-  border: 4px double $red;
+  border: 4px double $gold;
 }
 
 // Callout Styles
@@ -647,7 +648,7 @@ figcaption{
 }
 
 .nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
-    color: #00863f;
+    color: $black;
 }
 .nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
     color: #fff;

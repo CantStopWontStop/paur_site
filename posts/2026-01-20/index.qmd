@@ -1,7 +1,7 @@
 ---
 date: 2026-01-20
 title: 'Daily Update – Jan 20, 2026'
-author: 'Afromation Digital'
+author: 'Pan-African Updates'
 image: thumbnail.jpg
 format: 
     html:
@@ -14,9 +14,9 @@ execute:
 
 categories:
     - 'daily feed'
-
 ---
-'Buy a House in 2026? Trump’s Tariffs Shake Markets, Gold Rallies &amp; Beaten-Down Stocks to Buy; Woman Says Her STANK BOX Saved Her From COERCION From a Man!; African Immigrant Targeted By Anti-Black Racist For Having A Business, Mad He&#39;s A Failure In Life; AI Bias? BECOME THE CREATOR, NOT CONSUMER! #shorts; Martin Lawrence &#39;Shocks Fans&#39; With &#39;Weight Loss&#39; And &#39;New Appearance&#39;: &quot;He&#39;s Back!&quot; - HP News'
+
+'Buy a House in 2026? Trump’s Tariffs Shake Markets, Gold Rallies & Beaten-Down Stocks to Buy; Woman Says Her STANK BOX Saved Her From COERCION From a Man!; African Immigrant Targeted By Anti-Black Racist For Having A Business, Mad He's A Failure In Life; AI Bias? BECOME THE CREATOR, NOT CONSUMER! #shorts; Martin Lawrence 'Shocks Fans' With 'Weight Loss' And 'New Appearance': "He's Back!" - HP News'
 
 ```{r}
 
@@ -46,7 +46,7 @@ headings <- names(videos)
 
 ```
 
-##  Jan 20, 2026
+## Jan 20, 2026
 
 ```{r, results='asis'}
 #| warning: false
@@ -86,4 +86,3 @@ for (i in seq_along(videos)) {
 }
 
 ```
-

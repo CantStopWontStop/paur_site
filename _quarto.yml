@@ -5,20 +5,20 @@ project:
     - "!generator"
 
 website:
-  title: "afromation"
-  site-url: "https://afromation.io"
+  title: "Pan-African Updates"
+  site-url: "https://panafricanupdates.com"
   favicon: assets/images/afromation_favicon.png
   navbar:
     background: dark
     right:
       - updates.qmd
       - stories.qmd
-      - icon: instagram
-        href: https://www.instagram.com/afromation.io/
-      - icon: twitter
-        href: https://twitter.com/afromation_io
-      - icon: tiktok
-        href: https://www.tiktok.com/@afromationdigital
+     # - icon: instagram
+     #   href: https://www.instagram.com/afromation.io/
+    #  - icon: twitter
+    #    href: https://twitter.com/afromation_io
+    #  - icon: tiktok
+     #   href: https://www.tiktok.com/@afromationdigital
       - icon: youtube
         href: https://youtube.com/@afromation_digital?si=P_grLoHgOloQyBno
   page-footer:

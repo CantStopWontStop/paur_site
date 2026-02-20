@@ -1,5 +1,6 @@
 ---
 title: "HOME"
+
 page-layout: full
 title-block-banner: true
 format:
@@ -20,7 +21,9 @@ execute:
   warning: false
   message: false
 ---
+
 # [Stories]{.updates}
+
 ::: {#stories}
 :::
 
@@ -92,4 +95,3 @@ for (i in seq_along(videos)) {
 }
 
 ```
-
