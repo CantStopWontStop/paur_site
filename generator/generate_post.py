@@ -215,7 +215,7 @@ for (i in seq_along(videos)) {{
     current_df <- videos[[i]]
     
     cat("::: {{#listing-listing .quarto-listing .quarto-listing-container-grid}}", '\\n')
-    cat('::: {{.list .grid .quarto-listing-cols-3}}', '\\n')
+    cat('::: {{.list .grid .quarto-listing-cols-2}}', '\\n')
     
     for (i in seq_along(current_df$embeds)) {{
       if (!is.na(current_df$embeds[i])) {{  # Check if the embed is not empty
@@ -375,5 +375,6 @@ for (i in seq_along(videos)) {{
 file_name = os.path.join(home_dir,'index.qmd')
 with open(file_name, "w", encoding="utf-8") as file:
     file.write(home_markdown_content)
+
 
 
