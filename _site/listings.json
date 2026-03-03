@@ -7,14 +7,16 @@
     ]
   },
   {
-    "listing": "/index.html",
+    "listing": "/stories.html",
     "items": [
+      "/stories/fba/index.html",
       "/stories/welcome/index.html"
     ]
   },
   {
-    "listing": "/stories.html",
+    "listing": "/index.html",
     "items": [
+      "/stories/fba/index.html",
       "/stories/welcome/index.html"
     ]
   }
