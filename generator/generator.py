@@ -189,7 +189,7 @@ library(tidyverse)
 videos_tbl <- read_csv('videos_tbl.csv') |> 
   mutate(embeds = embeds |> 
            str_replace_all('480', '100%') |> 
-           str_replace_all('270', '50%'))
+           str_replace_all('270', '100%'))
 
 
 ```
@@ -380,5 +380,6 @@ for (i in seq_along(videos)) {{
 file_name = os.path.join(dir_path,'index.qmd')
 with open(file_name, "w", encoding="utf-8") as file:
     file.write(home_markdown_content)
+
 
 
