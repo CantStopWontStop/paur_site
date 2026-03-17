@@ -50,7 +50,7 @@ df = pd.read_csv(new_url)
 # %%
 SCOPES = ["https://www.googleapis.com/auth/youtube.readonly"]
 
-SERVICE_ACCOUNT_FILE =  "/root/afromation-key.json"
+SERVICE_ACCOUNT_FILE =  "/root/paur-key.json"
 
 
 def get_authenticated_service():
