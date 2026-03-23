@@ -1,0 +1,29 @@
+[
+  {
+    "listing": "/updates.html",
+    "items": [
+      "/posts/2026-03-23/index.html",
+      "/posts/2026-03-22/index.html",
+      "/posts/2026-03-21/index.html",
+      "/posts/2026-03-20/index.html",
+      "/posts/2026-03-19/index.html",
+      "/posts/2026-03-18/index.html",
+      "/posts/2026-01-21/index.html",
+      "/posts/2026-01-20/index.html"
+    ]
+  },
+  {
+    "listing": "/stories.html",
+    "items": [
+      "/stories/fba/index.html",
+      "/stories/welcome/index.html"
+    ]
+  },
+  {
+    "listing": "/index.html",
+    "items": [
+      "/stories/fba/index.html",
+      "/stories/welcome/index.html"
+    ]
+  }
+]

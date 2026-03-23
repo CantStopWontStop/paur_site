@@ -39,9 +39,9 @@ Content 3
 
 ```{r}
 # Leaflet map of Abuja (Nigeria)
-# install.packages(c("leaflet", "leaflet.extras", "htmlwidgets", "dplyr"))
+# install.packages(c("leaflet", "leaflet.extras2", "htmlwidgets", "dplyr"))
 library(leaflet)
-library(leaflet.extras)
+library(leaflet.extras2)
 
 # Abuja city center (approx.)
 abuja <- data.frame(
@@ -71,7 +71,6 @@ m <- leaflet(abuja) |>
   ) |>
 
   # Quick navigation helpers
-  addFullscreenControl() |>
   addMeasure(
     primaryLengthUnit = "kilometers",
     primaryAreaUnit   = "sqmeters"
