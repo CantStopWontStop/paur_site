@@ -1222,7 +1222,7 @@
     },
     "rmarkdown": {
       "Package": "rmarkdown",
-      "Version": "2.30",
+      "Version": "2.31",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -1241,7 +1241,7 @@
         "xfun",
         "yaml"
       ],
-      "Hash": "efe19db0fde0fff13cea7eec6f695021"
+      "Hash": "f34039d57d861d2869cbf9be813ed08e"
     },
     "rstudioapi": {
       "Package": "rstudioapi",
