@@ -6,133 +6,26 @@ categories: [update]
 title-block-banner: true
 image: https://images.unsplash.com/photo-1626695436755-3e288720849c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80
 ---
+This is a Pan-African, socio-political commentary and documentary-style platform focused on the intersection of race, history, global power, economics, media narratives, and Black identity across the African world. Drawing from current events, historical analysis, viral internet discourse, and geopolitical developments, the channel critically examines how systems of colonialism, white supremacy, capitalism, and global institutions continue to shape the lives of African people and the broader Black diaspora today.
 
-This is the first post. Here on the Pan-African Updates, we put forth ideas critical to building the AfroSphere[^1].
+Core themes include:
 
-[^1]: The cultural, political, and economic congregation of Africans and people of African decent
+-   Pan-Africanism and global Black solidarity
 
-::: column-margin
-![](https://images.unsplash.com/photo-1626695436755-3e288720849c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80)
-:::
+-   Reparations, colonialism, and the legacy of slavery
 
-Welcome!
+-   Media propaganda and narrative control
 
-Text for the page.
+-   Diaspora tensions and Black identity politics
 
-# Title
+-   Economic exploitation, land theft, and generational wealth
 
-## Subtitle
+-   African geopolitics and anti-colonial struggle
 
-::: panel-tabset
-## Tab 1
+-   Cultural appropriation and the commodification of Black culture
 
-Content 1
+-   Xenophobia, Afrophobia, and divide-and-conquer strategies
 
-## Tab 2
+-   Systemic racism within Western institutions and global systems
 
-Content 2
-
-## Tab 3
-
-Content 3
-:::
-
-```{r}
-# Leaflet map of Abuja (Nigeria)
-# install.packages(c("leaflet", "leaflet.extras2", "htmlwidgets", "dplyr"))
-library(leaflet)
-library(leaflet.extras2)
-
-# Abuja city center (approx.)
-abuja <- data.frame(
-  name = "Abuja (City Centre)",
-  lat  = 9.0765,
-  lng  = 7.3986
-)
-
-m <- leaflet(abuja) |>
-  addProviderTiles(providers$CartoDB.Positron, group = "Light") |>
-  addProviderTiles(providers$Esri.WorldImagery, group = "Satellite") |>
-  addProviderTiles(providers$OpenStreetMap, group = "OSM") |>
-
-  # Marker + popup
-  addMarkers(
-    ~lng, ~lat,
-    popup = ~paste0("<b>", name, "</b><br/>Lat: ", lat, "<br/>Lng: ", lng)
-  ) |>
-
-  # A 10 km radius circle around the center (for visual context)
-  addCircles(
-    lng = abuja$lng, lat = abuja$lat,
-    radius = 10000,
-    stroke = TRUE, weight = 2,
-    fillOpacity = 0.15,
-    popup = "10 km radius from Abuja city centre"
-  ) |>
-
-  # Quick navigation helpers
-  addMeasure(
-    primaryLengthUnit = "kilometers",
-    primaryAreaUnit   = "sqmeters"
-  ) |>
-  addMiniMap(toggleDisplay = TRUE) |>
-
-  # Set initial view
-  setView(lng = abuja$lng, lat = abuja$lat, zoom = 12) |>
-
-  # Layer control
-  addLayersControl(
-    baseGroups = c("Light", "Satellite", "OSM"),
-    options = layersControlOptions(collapsed = TRUE)
-  )
-
-m
-```
-
-```{r}
-# install.packages("ggplot2")   # Uncomment if needed
-library(ggplot2)
-
-# Data: estimated net worth of top 10 richest soccer players
-players <- c(
-  "Faiq Bolkiah", "Cristiano Ronaldo", "Lionel Messi",
-  "David Beckham", "Neymar Jr", "Kylian Mbappé",
-  "Wayne Rooney", "Dave Whelan", "Karim Benzema",
-  "Zlatan Ibrahimović"
-)
-
-net_worth <- c(
-  20000000000, 1400000000, 850000000,
-  500000000, 350000000, 300000000,
-  220000000, 210000000, 200000000,
-  190000000
-)
-
-df_richest <- data.frame(
-  Player = players,
-  NetWorth = net_worth
-)
-
-# Convert to factor to control bar order (descending)
-df_richest$Player <- factor(df_richest$Player, 
-                            levels = df_richest$Player[order(df_richest$NetWorth, decreasing = TRUE)])
-
-# Plot
-ggplot(df_richest, aes(x = Player, y = NetWorth / 1e9)) +
-  geom_bar(stat = "identity", fill = "steelblue") +
-  coord_flip() +
-  labs(
-    title = "Top 10 Richest Soccer Players in the World",
-    subtitle = "Estimated Net Worth (in USD, billions)",
-    x = "Player",
-    y = "Net Worth (Billion USD)"
-  ) +
-  theme_minimal() +
-  theme(
-    text = element_text(family = "Arial", size = 12),
-    plot.title = element_text(face = "bold", size = 16)
-  )
-
-```
-
-/
+-   Historical revisionism and the reclaiming of African history
