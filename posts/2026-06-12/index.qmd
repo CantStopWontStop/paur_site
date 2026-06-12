@@ -1,6 +1,6 @@
 ---
-date: 2026-06-11
-title: 'Daily Update – Jun 11, 2026'
+date: 2026-06-12
+title: 'Daily Update – Jun 12, 2026'
 author: 'Afromation Digital'
 image: thumbnail.jpg
 format: 
@@ -16,9 +16,7 @@ categories:
     - 'daily feed'
 
 ---
-
-'Drop a ⚽️ to welcome Efia to the team! Her YouTube is  @fifico92  #ADNC  #Efia #Ghana #Football; Hollywood Wanted Africans Eating Bugs | One54 Africa podcast; Knicks Vs Spurs NBA Finals Game 4 WATCH PARTY!!!; Riverbend Coming to Brooklyn Academy of Music on 6/17; Woman Doesn&#39;t Want To Date A Man With A REGULAR JOB!'
-
+'BT LIVE: Albania Protests | Iran Fires Back | World Cup Border Chaos; Men Would Rather BE AT PEACE Than Deal With Women!; (Igbo, Yoruba, Biafra War) Love Story | One54 Africa Podcast; Haha Davis Reacts To Druski Spending $100K On Skit I CLUB SHAY SHAY; Full: Austin Metcalf&#39;s Dad SPIRALS During Response To &#39;Karmelo Trial&#39;, Ends With Rant - HP News'
 
 ```{r}
 
@@ -38,7 +36,7 @@ videos_tbl <- read_csv('videos_tbl.csv') |>
 videos_joined <- videos_tbl |> 
     select(publishedAt,title, description, embeds, 
            channelId, category) |> 
-    filter(publishedAt >= lubridate::ymd('2026-06-11')-1)
+    filter(publishedAt >= lubridate::ymd('2026-06-12')-1)
 
 videos <- videos_joined |>  
     split(videos_joined$category) 
@@ -48,9 +46,7 @@ headings <- names(videos)
 
 ```
 
-
-##  Jun 11, 2026
-
+##  Jun 12, 2026
 
 ```{r, results='asis'}
 #| warning: false
