@@ -31,6 +31,9 @@ That history is why a Black body found hanging from a tree in Mississippi, Georg
 # Where It Happened
 
 ```{r}
+#| column: screen
+#| message: false
+
 library(tidyverse)
 library(leaflet)
 library(htmltools)
@@ -61,7 +64,10 @@ leaflet(lynchings, height = 520,
     label = ~name
   ) |>
   addLegend('bottomright', pal = pal, values = ~period,
-            title = 'Year found', opacity = 1)
+            title = 'Year found', opacity = 1) |>
+  fitBounds(min(lynchings$lng), min(lynchings$lat),
+            max(lynchings$lng), max(lynchings$lat),
+            options = list(padding = c(60, 60)))
 ```
 
 Each circle marks where a Black American was found dead in a case the community has questioned. Red circles are 2026 cases, and gray circles are earlier ones from 2024–2025. Faded circles mean the date or location is approximate. Click a circle for details.
