@@ -9,7 +9,7 @@ categories:
     - mississippi
     - history
 title-block-banner: true
-# image: thumbnail.jpg
+image: image.jpg
 execute:
   echo: false
   warning: false
