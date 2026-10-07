@@ -7,7 +7,8 @@ project:
 website:
   title: "Pan-African Updates"
   site-url: "https://panafricanupdates.com"
-  favicon: assets/images/paur.png
+  google-analytics: "G-NJGEEMYCE8"
+  favicon: assets/images/paur-favicon.png
   navbar:
     background: dark
     right:
