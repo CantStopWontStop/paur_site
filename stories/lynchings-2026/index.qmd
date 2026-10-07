@@ -10,16 +10,9 @@ categories:
     - history
 title-block-banner: true
 image: image.png
-comments:
-  giscus:
-    repo: CantStopWontStop/paur_site
-    repo-id: "R_kgDORGcOQQ"
-    category: "Announcements"
-    category-id: "DIC_kwDORGcOQc4DHOa9"
-    mapping: pathname
-    reactions-enabled: true
-    loading: lazy
-    theme: light
+format:
+  html:
+    include-after-body: disqus.html
 execute:
   echo: false
   warning: false
@@ -85,19 +78,19 @@ Each circle marks where a Black American was found dead in a case the community 
 # The 2026 Cases
 
 | Photo | Name | Age | Location | Found | Official Finding | What the Family / Community Says |
-|:----:|------------|-----------:|------------|------------|------------|------------|
-| ![Kyle Bassinga](<Kyle_Bassinga.png>){width="80px"} | **Kyle Bassinga** | 21 | Marietta (Cobb County), Georgia | Feb 18 | Suicide; police cite video of him entering the woods alone | Questions about the speed of the ruling |
-| ![Juliana Umba Nzita](<Juliana_Umba_Nzita.jpg>){width="80px"} | **Juliana Umba Nzita** | 16 | Charlotte, North Carolina | May 8 | Suicide, ruled within three days; no evidence of foul play | Relatives doubted the ruling and demanded an autopsy; she had been missing for 11 days |
-| ![To'Nea Nicole Miller](<ToNea_Nicole_Miller.jpeg>){width="80px"} | **To'Nea Nicole Miller** | 27 | Gwen Cherry Park, Liberty City, Miami, Florida | June 18 | "Consistent with a suicide," per the Miami-Dade Sheriff's Office and medical examiner | Her sister publicly rejected the ruling; #JusticeForTonea spread nationally. She was visiting from Flint, Michigan, for Juneteenth |
-| ![Justice Kai James](<Justice_Kai_James.jpg>){width="80px"} | **Justice Kai James** | 21 | Turner Job Corps, Albany, Georgia | June 21 | Under investigation by Albany police; police chief addressed "rumors" | Family disputes that he took his own life and has raised concerns about access to surveillance footage |
-| ![Jerard Jackson](<Jerard_Jay_Jackson.jpeg>){width="80px"} | **Jerard "Jay" Jackson** | 28 | Rothbury, Michigan (near a music festival) | June 30 | Suicide (preliminary) | Family disputes the finding; he had no prior mental-illness diagnosis |
-| ![Nolan Wells](<Nolan_Wells.jpg>){width="80px"} | **Nolan Xavier Wells** | 18 | Shoreline of Horn Island, off Ocean Springs, Mississippi | July 6 | Cause of death undetermined by the state medical examiner, but consistent with drowning. The state autopsy found no fluid or debris in his airways. On Sept 22, a grand jury declined to bring charges, finding no evidence of a crime | Went missing July 4 after a trip to the island with mostly white friends. Family disputes the drowning finding; their independent autopsy found red discoloration on the back of his skull. They say they learned of the grand jury decision by text from the DA. The Congressional Black Caucus has asked for a federal review
-| ![Tasia Fortune](<Tasia_Fortune.jpg>){width="80px"} | **Tasia Fortune** | 29 | Behind a vacant home, Jackson, Mississippi | Aug 3 | **Homicide.** Police say she was killed in a drug dispute and the hanging was staged afterward; three men have been charged with murder | Her mother: "She did not do this to herself." The family says she fought for her life |
-| ![Unnamed man (no photo)](<unknown male.jpg>){width="80px"} | **Unnamed man** | 32 | Downtown parking lot, Raleigh, North Carolina | August | Suicide; police say video shows him alone | Family has not disputed the ruling publicly |
-| ![Demetrius Fleming](<Demetrius_Fleming.jpg>){width="80px"} | **Demetrius Fleming** | 38 | Roanoke Rapids, North Carolina | Aug 21 | "Equivocal": still under investigation | Police chief acknowledged "the implications surrounding the death of a Black man by hanging" |
-| ![Unnamed man (no photo)](<unknown male.jpg>){width="80px"} | **Unnamed man** | — | Near Upper Marlboro, Maryland | Sept 20 | Suicide, ruled the next day; no other signs of trauma | Family asked that his name not be released; police say the investigation continues |
+|:---------:|-----------|----------:|-----------|-----------|-----------|-----------|
+| ![Kyle Bassinga](Kyle_Bassinga.png){width="80px"} | **Kyle Bassinga** | 21 | Marietta (Cobb County), Georgia | Feb 18 | Suicide; police cite video of him entering the woods alone | Questions about the speed of the ruling |
+| ![Juliana Umba Nzita](Juliana_Umba_Nzita.jpg){width="80px"} | **Juliana Umba Nzita** | 16 | Charlotte, North Carolina | May 8 | Suicide, ruled within three days; no evidence of foul play | Relatives doubted the ruling and demanded an autopsy; she had been missing for 11 days |
+| ![To'Nea Nicole Miller](ToNea_Nicole_Miller.jpeg){width="80px"} | **To'Nea Nicole Miller** | 27 | Gwen Cherry Park, Liberty City, Miami, Florida | June 18 | "Consistent with a suicide," per the Miami-Dade Sheriff's Office and medical examiner | Her sister publicly rejected the ruling; #JusticeForTonea spread nationally. She was visiting from Flint, Michigan, for Juneteenth |
+| ![Justice Kai James](Justice_Kai_James.jpg){width="80px"} | **Justice Kai James** | 21 | Turner Job Corps, Albany, Georgia | June 21 | Under investigation by Albany police; police chief addressed "rumors" | Family disputes that he took his own life and has raised concerns about access to surveillance footage |
+| ![Jerard Jackson](Jerard_Jay_Jackson.jpeg){width="80px"} | **Jerard "Jay" Jackson** | 28 | Rothbury, Michigan (near a music festival) | June 30 | Suicide (preliminary) | Family disputes the finding; he had no prior mental-illness diagnosis |
+| ![Nolan Wells](Nolan_Wells.jpg){width="80px"} | **Nolan Xavier Wells** | 18 | Shoreline of Horn Island, off Ocean Springs, Mississippi | July 6 | Cause of death undetermined by the state medical examiner, but consistent with drowning. The state autopsy found no fluid or debris in his airways. On Sept 22, a grand jury declined to bring charges, finding no evidence of a crime | Went missing July 4 after a trip to the island with mostly white friends. Family disputes the drowning finding; their independent autopsy found red discoloration on the back of his skull. They say they learned of the grand jury decision by text from the DA. The Congressional Black Caucus has asked for a federal review |
+| ![Tasia Fortune](Tasia_Fortune.jpg){width="80px"} | **Tasia Fortune** | 29 | Behind a vacant home, Jackson, Mississippi | Aug 3 | **Homicide.** Police say she was killed in a drug dispute and the hanging was staged afterward; three men have been charged with murder | Her mother: "She did not do this to herself." The family says she fought for her life |
+| ![Unnamed man (no photo)](unknown%20male.jpg){width="80px"} | **Unnamed man** | 32 | Downtown parking lot, Raleigh, North Carolina | August | Suicide; police say video shows him alone | Family has not disputed the ruling publicly |
+| ![Demetrius Fleming](Demetrius_Fleming.jpg){width="80px"} | **Demetrius Fleming** | 38 | Roanoke Rapids, North Carolina | Aug 21 | "Equivocal": still under investigation | Police chief acknowledged "the implications surrounding the death of a Black man by hanging" |
+| ![Unnamed man (no photo)](unknown%20male.jpg){width="80px"} | **Unnamed man** | — | Near Upper Marlboro, Maryland | Sept 20 | Suicide, ruled the next day; no other signs of trauma | Family asked that his name not be released; police say the investigation continues |
 
-: Black Americans whose 2026 deaths are being questioned, as of early October {.striped .hover tbl-colwidths="[10,12,5,15,6,26,26]"}
+: Black Americans whose 2026 deaths are being questioned, as of early October {.striped .hover tbl-colwidths="\[10,12,5,15,6,26,26\]"}
 
 ## To'Nea Nicole Miller: Juneteenth weekend in Miami
 
