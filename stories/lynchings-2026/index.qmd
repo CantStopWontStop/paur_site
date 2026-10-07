@@ -10,6 +10,16 @@ categories:
     - history
 title-block-banner: true
 image: image.png
+comments:
+  giscus:
+    repo: CantStopWontStop/paur_site
+    repo-id: "R_kgDORGcOQQ"
+    category: "Announcements"
+    category-id: "DIC_kwDORGcOQc4DHOa9"
+    mapping: pathname
+    reactions-enabled: true
+    loading: lazy
+    theme: light
 execute:
   echo: false
   warning: false
